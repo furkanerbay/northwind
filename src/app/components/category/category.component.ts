@@ -13,6 +13,7 @@ import { CategoryService } from 'src/app/services/category.service';
 export class CategoryComponent implements OnInit {
 categories : Category[]=[];
 currentCategory : Category;
+cleanCategory:Category;
 
 constructor(private categoryService:CategoryService){}
 
@@ -56,6 +57,11 @@ constructor(private categoryService:CategoryService){}
     {
       return "list-group-item";
     }
+  }
+
+  currentClean()
+  {
+    this.currentCategory=this.cleanCategory;
   }
 
 }
